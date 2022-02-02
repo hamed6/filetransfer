@@ -8,23 +8,17 @@ from .serializers import FileSerializer
 from django.http import Http404, HttpResponse
 from .models import Organization, User
 
-#define a class with all related func
 
-# get_file_list
-# upload_file
-# get_dl_number_file
-# get_dl_number_org
+def find_org(uid):
+    user_organization=User.objects.get(id=uid)
+    return user_organization.organization_name
 
 
+
+#=================================================================
 def find_user(uid):
     user=User.objects.get(id=uid)
     return user
-
-
-def find_org(uid):
-    user=find_user(uid)
-    org=Organization.objects.all().filter(organization_name=user.organization_name)
-    return org
 
 
 

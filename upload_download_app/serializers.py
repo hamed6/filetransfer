@@ -4,4 +4,4 @@ from .models import Organization
 class FileSerializer(serializers.ModelSerializer):
     class Meta():
         model=Organization
-        fields= ('organization_name', 'organization_files', 'file_dlnumber')
+        fields= ['organization_files']
