@@ -5,3 +5,10 @@ class FileSerializer(serializers.ModelSerializer):
     class Meta():
         model=Organization
         fields= ['organization_files']
+
+
+
+class StatisticsSerializer(serializers.ModelSerializer):
+    class Meta():
+        model=Organization
+        fields=['organization_files','organization_name', 'file_dlnumber']

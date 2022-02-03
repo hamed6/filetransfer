@@ -18,8 +18,6 @@ class User(models.Model):
 class Organization(models.Model):
     
     organization_name=models.CharField(choices=oraganzation_catgory, max_length=25)    
-    # organization_name=models.ForeignKey(User,on_delete=models.CASCADE, max_length=25, blank=False)    
-    # organization_name=models.CharField(max_length=10,blank=False)
     organization_files=models.FileField(upload_to='uploaded_files/')
     file_dlnumber=models.IntegerField(default=0)
 
